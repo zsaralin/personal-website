@@ -3,6 +3,7 @@ import Typist from "react-typist";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
+
 const MainBody = React.forwardRef(
   ({ gradient, title, message, icons }, ref) => {
     return (
@@ -15,7 +16,7 @@ const MainBody = React.forwardRef(
         }}
         className="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
       >
-        <div id="stars"></div>
+          <div id = "stars"/>
         <Container className="text-center">
           <h1 ref={ref} className="display-1">
             {title}
@@ -35,16 +36,36 @@ const MainBody = React.forwardRef(
               >
                 <i className={`fab ${icon.image}  fa-3x socialicons`} />
               </a>
-            ))}
-          </div>
+            ))},
+
+          </div >
+            <a
+                className="btn btn-outline-light btn-lg "
+                href="#aboutme"
+                role="button"
+                aria-label="Resume"
+                style = {{margin: '5px'}}
+            >
+                Resume
+            </a>
           <a
             className="btn btn-outline-light btn-lg "
             href="#aboutme"
             role="button"
-            aria-label="Learn more about me"
+            aria-label="Portfolio"
+            style = {{margin: '5px'}}
           >
-            More about me
+            Portfolio
           </a>
+            <a
+                className="btn btn-outline-light btn-lg "
+                href="#aboutme"
+                role="button"
+                aria-label="Art"
+                style = {{margin: '5px'}}
+            >
+                Creative Work
+            </a>
         </Container>
       </Jumbotron>
     );

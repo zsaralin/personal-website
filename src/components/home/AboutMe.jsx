@@ -7,7 +7,7 @@ const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
 );
 
-const AboutMe = ({ heading, message, link, imgSize, resume }) => {
+const AboutMe = ({ heading, message, link, imgSize, resume,cv }) => {
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
 
@@ -61,6 +61,16 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
                   aria-label="Resume/CV"
                 >
                   Resume
+                </a>
+                <a style = {{margin: '5px'}}
+                    className="btn btn-outline-dark btn-lg"
+                    href={cv}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    role="button"
+                    aria-label="Resume/CV"
+                >
+                  CV
                 </a>
               </p>
             )}
